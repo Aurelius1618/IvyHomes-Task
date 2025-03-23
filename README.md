@@ -105,7 +105,6 @@ Proxy Manager (Optional)
 The utils/proxy_manager.py module offers a strategy to rotate proxies to bypass IP-based rate limits. Although this module is not used by default, it represents an interesting approach for cases where rate limiting becomes a significant bottleneck.
 
 Logging
-
 Detailed logging is set up via utils/logger.py to help track progress, debug issues, and save checkpoints.
 
 Findings & Metrics
