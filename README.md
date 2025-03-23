@@ -23,55 +23,32 @@ Incorporate checkpointing and logging for progress and debugging.
 Note on Proxy Manager: The project contains a proxy_manager.py module, which is an interesting approach to bypass IP-based rate limiting by rotating proxies. Although it is not used by default, it can be activated if you need to distribute your requests across multiple IPs.
 
 Directory Structure
-
+```
 IvyHomes Task/
-
 ├── README.md
-
 ├── requirements.txt
-
 ├── src/
-
 │   ├── __init__.py
-
 │   ├── api_client.py         # Handles API requests, response parsing, and rate limit handling.
-
 │   ├── extractors/  
-
 │   │   ├── __init__.py
-
 │   │   ├── base_extractor.py # The base class implements DFS, checkpointing, and logging.
-
 │   │   ├── v1_extractor.py   # Extractor for v1 (alphabets only)
-
 │   │   ├── v2_extractor.py   # Extractor for v2 (alphanumeric)
-
 │   │   └── v3_extractor.py   # Extractor for v3 (alphanumeric + special characters)
-
 │   ├── utils/    
-
 │   │   ├── __init__.py
-
 │   │   ├── logger.py         # Logging configuration.
-
 │   │   ├── rate_limiter.py   # Rate limiter using a sliding-window approach.
-
 │   │   └── proxy_manager.py  # (Optional) Manages proxy rotation to bypass IP rate limits.
-
 │   └── main.py               # Main entry point; sets up parallel execution of extractors.
-
 ├── tests/                    # (Optional) Unit tests for API clients and extractors.
-
 │   └── test_api_client.py
-
 └── data/                     # Contains checkpoints, results, and logs.
-
-    ├── checkpoints/
-    
-    ├── results/
-    
+    ├── checkpoints/   
+    ├── results/    
     └── logs/
-    
+  ```  
 
 Installation
 Clone the Repository
