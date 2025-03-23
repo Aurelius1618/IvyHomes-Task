@@ -54,34 +54,39 @@ Installation
 Clone the Repository
 
 bash
+```
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
-Set Up the Environment
+```
 
+Set Up the Environment
 Make sure you have installed Python 3.8 or later.
 
 Install Dependencies
-
+```
 bash
 pip install -r requirements.txt
+```
 (Optional) Configure Proxies
 
 If you wish to experiment with proxy rotation to bypass IP-based rate limits, create a .env file in the root directory and add your proxy list:
 
 text
+```
 PROXY_LIST=http://user:pass@proxy1.example.com:8080,http://user:pass@proxy2.example.com:8080
-
+```
 Usage
 Run the extraction script from the project root:
 
 bash
+```
 python -m src.main --versions v1,v2,v3 --parallel
+```
 Options:
-
+```
 --versions: Comma-separated API versions (default: v1,v2,v3).
-
 --parallel: Run the extractors concurrently using threads.
-
+```
 Checkpoints, logs, and final results will be stored in the data/ directory.
 
 Implementation Details
